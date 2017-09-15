@@ -1,25 +1,35 @@
 //: [Previous](@previous)
 class Person {
-  let name: String
-  
-  init(name: String) {
-    self.name = name
-  }
+	let name:String
+	
+	init(name:String) {
+		self.name = name
+	}
 }
 
 enum MassageChair {
-  case free
-  case occupied(Person)
+	case free
+	case occupied(Person)
 }
 
-let nikolas = Person(name: "Nikolas")
-let massageChair = MassageChair.occupied(nikolas)
+let phyllis = Person(name: "Phyllis")
+let juan = Person(name: "Juan")
+
+var massageChair = MassageChair.occupied(phyllis)
+massageChair = MassageChair.occupied(juan)
+
+//switch massageChair {
+//case .free:
+//  print("The chair is currently free.")
+//case .occupied(let person):
+//  print("\(person.name) is enjoying an extremyle nice and comforting massage right now. Please don't disturb and wait until it's your turn!")
+//}
 
 switch massageChair {
 case .free:
-  print("The chair is currently free.")
+	print("The chair is currently available to enjoy.")
 case .occupied(let person):
-  print("\(person.name) is enjoying an extremyle nice and comforting massage right now. Please don't disturb and wait until it's your turn!")
+	print("\(person.name) is enjoying a relaxing massage currently. Please do not disturb, your turn is coming up shortly.")
 }
 
 /*:
@@ -42,55 +52,6 @@ case .occupied(let person):
  5. Make the `Box` _generic_ so that it can contain an object of any type, not just `Thing`.
  */
 
-class Thing {
-  let name: String
-  
-  init(name: String) {
-    self.name = name
-  }
-}
-
-enum Box<T> {
-  case empty
-  case contains(T)
-}
-
-enum Optional<T> {
-  case none
-  case some(T)
-}
-
-
-var emptyBox = Box<String>.empty
-emptyBox = .contains("hello")
-var stringBox = Box<String>.empty
-
-let soccerBall = Thing(name: "Soccer Ball")
-let boxWithSoccerBall = Box.contains(soccerBall)
-
-
-protocol HasName {
-  var name: String {
-    get
-  }
-}
-
-func inTheBox(box: Box<HasName>) -> String {
-  switch box {
-  case .empty:
-    return "box is empty"
-  case .contains(let thing):
-    return "box contains something: ] \(thing.name))"
-  }
-}
-
-
-
-//inTheBox(box: boxWithSoccerBall)
-//inTheBox(box: emptyBox)
-
-let box = Box.contains("hello")
-//inTheBox(box: box)
 
 
 
