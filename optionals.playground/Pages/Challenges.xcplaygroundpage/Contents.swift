@@ -17,6 +17,7 @@ class Person {
   }
 }
 
+// ~~~~~~ ask eliel if this is what he means by this function ~~~~~~~
 func myNameIs(Person: String?) -> String {
 	var greeting = ""
 	
