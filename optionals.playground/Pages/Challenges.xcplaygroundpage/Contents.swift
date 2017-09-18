@@ -17,21 +17,61 @@ class Person {
   }
 }
 
-// ~~~~~~ ask eliel if this is what he means by this function ~~~~~~~
-func myNameIs(Person: String?) -> String {
+// ~~~~~~ ask Eliel if this is what he means by this function ~~~~~~~
+func myNameIs(name: Person?) -> String {
 	var greeting = ""
 	
-	if let person = Person {
-		greeting = "Hello, my name is \(person)."
+	if let person = name {
+		greeting = "Hello, my name is \(person.name)."
 	} else {
 		greeting = "This is not a valid person object"
 	}
 	return greeting
 }
 
-let phyllis = Person(name: "Phyllis")
+//let tigger = Tiger(name: "Tigger")
+var maybePerson1: Person? = Person(name: "Phyllis")
+var maybePerson2: Person? = nil
 
-let myName = myNameIs(Person: "phyllis")
-print(myName)
+print(myNameIs(name: maybePerson1))
+
+//switch someOptional {
+//case someValue?:
+//	print("the value is \(someValue)")
+//case let val?:
+//	print("the value is \(val)")
+//default:
+//	print("nil")
+//}
+
+//switch string2 {
+//case .none:
+//	print("no value contained in string2")
+//case .some(let number):
+//	print("string2 contains: \(number)")
+//}
+
+func myNameIs2(person: Person?) -> String {
+	var greeting: String = ""
+
+	switch person {
+	case .some(let person):
+		greeting = "Hello, my name is \(person.name)."
+	case .none:
+		greeting = "This is not a valid person object"
+	default:
+		break
+	}
+	return greeting
+}
+
+print(myNameIs2(person: maybePerson1))
+print(myNameIs2(person: maybePerson2))
+
+
+
+
+
+
 
 
