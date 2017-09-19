@@ -59,8 +59,8 @@ func myNameIs2(person: Person?) -> String {
 		greeting = "Hello, my name is \(person.name)."
 	case .none:
 		greeting = "This is not a valid person object"
-	default:
-		break
+//	default:
+//		break
 	}
 	return greeting
 }
