@@ -58,8 +58,21 @@ print(myNameIs2(person: maybePerson2))
 
 
 
+var uchena: Person = Person(name: "Uchena")
+print(myNameIs2(person: uchena))
 
+uchena.age = 27
 
+func getAge(person: Person?) -> String {
+	var ageChecker: String = ""
+	
+	if let unwrappedPerson = person?.age {
+		ageChecker = "\(person?.name)'s age is currently \(unwrappedPerson)"
+	} else {
+		ageChecker = ("This person did not input their age. ")
+	}
+	return ageChecker
+}
 
-
+print(getAge(person: uchena))
 
