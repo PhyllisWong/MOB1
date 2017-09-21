@@ -53,9 +53,17 @@
 extension Deck {
     func bubbleSort() {
         // Implement this!
-        
+		for i in 0...cards.count-2 {
+			var curCard = cards[i]
+			var nextCard = cards[i+1]
+			if (curCard.value > nextCard.value) {
+				Swift.swap(&curCard, &nextCard)
+			}
+		}
     }
 }
+
+
 
 /*:
  
