@@ -33,6 +33,26 @@ extension Deck {
 	// sorts an array by swapping cards at indicies
     func selectionSort() {
 		
+		// find the lowest value in the rest of the deck
+		for i in 0...cards.count-1 {
+			// set the smallest value to the first index
+			var smallest = i
+			
+			// Look at each card in the deck, and compare the first, to each index
+			for j in i+1..<cards.count {
+				
+				// Move smallest card to the zeroth index
+				if cards[i].value < cards[0].value {
+					deck.swap(i, 0)
+				}
+				
+				// look at each next index to the first plus 1
+				if cards[i].value > cards[j].value {
+					// swap if finds smaller
+					deck.swap(i, j)
+				}
+			}
+		}
 	}
 }
 
