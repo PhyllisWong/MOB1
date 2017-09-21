@@ -50,18 +50,41 @@
  
  */
 
+
+
+
 extension Deck {
+	
+	// swap method expects the index of first item, and second item
+	// moves the first one to the second spot, and the second one to the 1st spot
+	public func swap(_ first: Int, _ second: Int) {
+		
+		let temp = cards[first]
+		cards[first] = cards[second]
+		cards[second] = temp
+	}
+	
     func bubbleSort() {
+//		print(cards)
         // Implement this!
 		for i in 0...cards.count-2 {
+			
 			var curCard = cards[i]
 			var nextCard = cards[i+1]
+			print(curCard.value, nextCard.value)
 			if (curCard.value > nextCard.value) {
-				Swift.swap(&curCard, &nextCard)
+//				print("if statement")
+				deck.swap(i, i+1)
+
 			}
+//			bubbleSort()
 		}
+//		print(cards)
+		
     }
 }
+
+
 
 
 
