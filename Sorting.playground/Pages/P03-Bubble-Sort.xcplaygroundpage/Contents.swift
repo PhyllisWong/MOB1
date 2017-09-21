@@ -65,24 +65,28 @@ extension Deck {
 	}
 	
     func bubbleSort() {
-//		print(cards)
-        // Implement this!
-		for i in 0...cards.count-2 {
+        // loop thru the whole array (deck) at each index, perform the nested loop
+		for _ in 0...cards.count {
 			
-			var curCard = cards[i]
-			var nextCard = cards[i+1]
-			print(curCard.value, nextCard.value)
-			if (curCard.value > nextCard.value) {
-//				print("if statement")
-				deck.swap(i, i+1)
-
+			// look at each pair, and swap
+			for value in 0...(cards.count-2) {
+				let curCard = cards[value]
+				let nextCard = cards[value+1]
+//				print(curCard.value, nextCard.value)
+				
+				// if card 1 has a greater value than card 2, swap the indices
+				if (curCard.value > nextCard.value) {
+					deck.swap(value, value+1)
+				}
 			}
-//			bubbleSort()
 		}
-//		print(cards)
-		
     }
+	
 }
+
+
+
+
 
 
 
@@ -124,3 +128,7 @@ let (sceneView, scene) = CardSortScene.setupScene(deck)
 sceneView.presentScene(scene)
 PlaygroundPage.current.liveView = sceneView
 deck.bubbleSort()
+//print(deck)
+
+
+
