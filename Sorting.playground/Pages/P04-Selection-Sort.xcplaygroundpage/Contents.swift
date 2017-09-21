@@ -21,10 +21,19 @@
  */
 
 extension Deck {
+	
+	// looks at 2 cards at indicies, and swaps the indicies
+	public func swap(_ first: Int, _ second: Int) {
+		// Fix this!
+		let temp = cards[first]
+		cards[first] = cards[second]
+		cards[second] = temp
+	}
+	
+	// sorts an array by swapping cards at indicies
     func selectionSort() {
-        //Student code here!
-        
-    }
+		
+	}
 }
 
 /*:
