@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Bold</string>
+            <string>Optima-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -181,6 +187,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKd-Rz-WJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1476" y="32.833583208395808"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kjU-md-16y">
+            <objects>
+                <viewController id="Ygw-nV-Dsd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eEp-5w-nmz"/>
+                        <viewControllerLayoutGuide type="bottom" id="jgO-4f-gSA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mIQ-hN-NFf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16C-W3-Gb6">
+                                <rect key="frame" x="16" y="20" width="197" height="197"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="16C-W3-Gb6" secondAttribute="height" multiplier="1:1" id="x1r-jU-Tnf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phyllis Wong" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWW-BF-zqU">
+                                <rect key="frame" x="218" y="20" width="141" height="30"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oakland, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvO-0h-V7M">
+                                <rect key="frame" x="258" y="55" width="100.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xvO-0h-V7M" firstAttribute="leading" secondItem="16C-W3-Gb6" secondAttribute="trailing" constant="45" id="5Di-fP-EZX"/>
+                            <constraint firstItem="jgO-4f-gSA" firstAttribute="top" secondItem="xvO-0h-V7M" secondAttribute="bottom" constant="590.5" id="9x9-hh-QDi"/>
+                            <constraint firstItem="xvO-0h-V7M" firstAttribute="top" secondItem="aWW-BF-zqU" secondAttribute="bottom" constant="5" id="BD1-2t-7yf"/>
+                            <constraint firstItem="aWW-BF-zqU" firstAttribute="trailing" secondItem="mIQ-hN-NFf" secondAttribute="trailingMargin" id="Cty-xp-xjb"/>
+                            <constraint firstItem="16C-W3-Gb6" firstAttribute="leading" secondItem="mIQ-hN-NFf" secondAttribute="leadingMargin" id="PJW-Qj-aKC"/>
+                            <constraint firstItem="jgO-4f-gSA" firstAttribute="top" secondItem="16C-W3-Gb6" secondAttribute="bottom" constant="450" id="VJC-z7-ZKi"/>
+                            <constraint firstItem="16C-W3-Gb6" firstAttribute="top" secondItem="eEp-5w-nmz" secondAttribute="bottom" multiplier="1:1" id="dt5-0N-Y7h"/>
+                            <constraint firstItem="aWW-BF-zqU" firstAttribute="leading" secondItem="16C-W3-Gb6" secondAttribute="trailing" constant="5" id="jY6-jG-Bfm"/>
+                            <constraint firstItem="aWW-BF-zqU" firstAttribute="top" secondItem="eEp-5w-nmz" secondAttribute="bottom" id="spV-cM-vO5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xvO-0h-V7M" secondAttribute="trailing" id="xYe-Sr-rWS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCG-Um-Sbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2122.4000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
