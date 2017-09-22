@@ -25,16 +25,16 @@
 let numCardsInSuit = 13
 
 public func <(first: Card, second: Card) -> Bool {
-    // Implement this!
+    let firstSuitValue = first.suit.rawValue, secondSuitValue = second.suit.rawValue
     
-    return true
+    return (firstSuitValue < secondSuitValue)
 }
 
 extension Deck {
     public func selectionSort() {
-        for index in 0...cards.count-2 {
+        for index in 0..<cards.count-1 {
             var lowestIndex = index
-            for index in index+1...cards.count-1 {
+            for index in index+1..<cards.count {
                 if cards[index] < cards[lowestIndex] {
                     lowestIndex = index
                 }
