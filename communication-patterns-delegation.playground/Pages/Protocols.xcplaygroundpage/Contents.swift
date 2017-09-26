@@ -211,11 +211,36 @@ describe(item: Ostrich())
  
  1. a. Create a model of a car, it should have a max speed, number of wheels, doors and model properties.
     b. Generalize the car, create a model for a vehicle which will represent all vehicles, a truck, motocycle & bus are vehicles
- 
+
  2.
  */
 
- protocol CanMakeNoise {
+protocol Vehicle {
+    var maxSpeed: Int {get set}
+    var numOfWheels: Int {get set}
+    var doors: Int {get}
+}
+
+struct Car: Vehicle {
+    var maxSpeed: Int
+    var numOfWheels: Int
+    var doors: Int
+}
+
+struct Truck: Vehicle {
+    var maxSpeed: Int
+    var numOfWheels: Int
+    var doors: Int
+    
+}
+
+let toyota = Car(maxSpeed: 100, numOfWheels: 10, doors: 10)
+let ferrari = Car(maxSpeed: 140, numOfWheels: 4, doors: 2)
+let prius = Car(maxSpeed: 85, numOfWheels: 4, doors: 4)
+let toyotaTacoma = Truck(maxSpeed: 75, numOfWheels: 4, doors: 2)
+
+
+protocol CanMakeNoise {
     func makeNoise()
  }
  
