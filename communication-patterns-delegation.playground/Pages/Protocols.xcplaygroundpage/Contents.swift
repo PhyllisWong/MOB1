@@ -31,14 +31,10 @@ struct Orka: Mammal {
     }
 }
 
-class Human: Mammal {
-    func eat() -> Food {
-        return Food.sandwich
-    }
-}
 
-let peter = Human()
-peter.eat()
+
+//let peter = Human()
+//peter.eat()
 
 let myOrka = Orka()
 myOrka.eat()
@@ -242,27 +238,36 @@ let toyotaTacoma = Truck(maxSpeed: 75, numOfWheels: 4, doors: 2)
 
 protocol CanMakeNoise {
     func makeNoise()
- }
+}
  
- class Elephant {
+class Elephant: CanMakeNoise {
+    func makeNoise() {print( "Pawoo")}
+}
  
- }
+class Pig: CanMakeNoise {
+    func makeNoise() {print( "Oink")}
+}
  
- class Pig {
- 
- }
- 
- class Cow {
- 
- }
- 
- 
- let elephant = Elephant()
- let pig = Pig()
- let cow = Cow()
- 
- // let arrayOfNoiseMaker: [CanMakeNoise] = [human, pig, cow]
+class Cow: CanMakeNoise {
+    func makeNoise(){print("Moo")}
+}
 
+class Human: Mammal, CanMakeNoise {
+    func eat() -> Food {return Food.sandwich}
+    func makeNoise() {print("Arghhhhhhhh!")}
+}
+ 
+ 
+let elephant = Elephant()
+let pig = Pig()
+let cow = Cow()
+let human = Human()
+ 
+let arrayOfNoiseMaker: [CanMakeNoise] = [human, pig, cow]
+
+for i in arrayOfNoiseMaker {
+    i.makeNoise()
+}
 
 /*:
  
