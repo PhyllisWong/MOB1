@@ -278,6 +278,7 @@ for i in arrayOfNoiseMaker {
  */
 
 /*:
+ 
  3.
  
  Take at look at the protocol definition for Equatable by Apple:
@@ -320,10 +321,25 @@ struct Artist {
     let yearBorn: Int
 }
 
+extension Artist: Equatable {
+    static func == (lhs: Artist, rhs: Artist) -> Bool {
+        return
+            lhs.name == rhs.name &&
+            lhs.style == rhs.style &&
+            lhs.yearBorn == rhs.yearBorn
+    }
+}
+
 // Example instances of Artists, use for testing your equatable
-let monet = Artist(name: "monet", style: .impressionism, yearBorn: 1840)
+let monet = Artist(name: "Monet", style: .impressionism, yearBorn: 1840)
 let dali = Artist(name: "Salvador Dali", style: .surrealism, yearBorn: 1904)
 let andy = Artist(name: "Andy Warhol", style: .popArt, yearBorn: 1928)
+let frida = Artist(name: "Fida Kahlo", style: .surrealism, yearBorn: 1907)
+print(monet.name == dali.name)
+print(dali.style == frida.style)
+
+
+
 
 
 /*:
