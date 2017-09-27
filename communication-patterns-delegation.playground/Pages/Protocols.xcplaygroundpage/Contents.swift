@@ -353,6 +353,15 @@ print(dali.style == frida.style)
  
  
 */
+let array2D = [[2,5,9], [0, 4, 2], [6, 8, 3]]
+let flattArray = Array(array2D.joined())
+print(flattArray)
+
+// I feel like this is a little cheating...
+
+for i in flattArray {
+    print(i)
+}
 
 
 
