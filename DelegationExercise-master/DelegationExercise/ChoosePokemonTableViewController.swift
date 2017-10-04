@@ -15,6 +15,7 @@ protocol PokemonSelectorDelegate: class {
 
 class ChoosePokemonTableViewController: UITableViewController {
 
+    // list of friends is the data source
     var pokemons: [Pokemon] = []
     var selectedPokemon: Pokemon?
     
@@ -26,19 +27,20 @@ class ChoosePokemonTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    // how many sections you want to have
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
-
+    // how many rows to ahve
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return pokemons.count
     }
 
-    
+    // what to display in each cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "pokeCell", for: indexPath)
 
         cell.textLabel?.text =  pokemons[indexPath.row].name
@@ -46,6 +48,7 @@ class ChoosePokemonTableViewController: UITableViewController {
         return cell
     }
 
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedPokemon = pokemons[indexPath.row]
