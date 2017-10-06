@@ -13,23 +13,18 @@ import PlaygroundSupport
 // Test out the function in course that prints out its list of students
 
 class Student {
-    var name: String
-    var courseList = [Course]()
+    let name: String
+    var courses: [Course] = []
     
     init(name: String) {
         self.name = name
     }
     
-    func printCourses() {
-        for course in courseList {
-            print(course.name)
-        }
-    }
 }
 
 class Course {
-    var name: String
-    var roster = [Student]()
+    let name: String
+    var roster: [Student] = []
     
     init(name: String) {
         self.name = name
@@ -42,19 +37,19 @@ class Course {
     }
 }
 
-let bob = Student(name: "bob")
-let jane = Student(name: "jane")
+let jane = Student(name: "Jane Doe")
+let davey = Student(name: "Davey Jones")
+let mob1 = Course(name: "Mobile 1")
+let cs1 = Course(name: "Computer Science 1")
+let web1 = Course(name: "Web Development 1")
 
-var mob1 = Course(name: "Mobile 1")
 
-mob1.roster.append(bob)
-mob1.roster.append(jane)
-bob.courseList.append(mob1)
-jane.courseList.append(mob1)
-
+jane.courses += [mob1, cs1]
+davey.courses += [web1, cs1]
+mob1.roster += [jane]
+cs1.roster += [jane, davey]
 mob1.printRoster()
-jane.printCourses()
-
+cs1.printRoster()
 
 
 // Problem #2
