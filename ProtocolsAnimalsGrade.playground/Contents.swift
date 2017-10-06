@@ -65,43 +65,62 @@ cs1.printRoster()
  
 */
 
-enum FoodType {
+enum Food:String {
     case meat
     case grass
 }
 
 protocol Fly {
-    func fly()
+    func canFly()
 }
 
 protocol Jump {
-    func jump()
+    func canJump()
 }
 
-protocol Animal {
-    var species: String {get set}
-    func eat(food: FoodType)
-}
-
-struct Cat: Animal, Jump {
-    var species: String
-    func eat(food: FoodType) {
-        print("this animal easts \(food)")
+class Animal {
+    let species: String
+    let breed: String
+    
+    init(species: String, breed: String) {
+        self.species = species
+        self.breed = breed
     }
     
-    func jump() {
-        print("This animal jumps really high")
+    func eat(food: Food) {
+        print("\(species) is eating \(food)")
     }
 }
 
-struct Bird: Animal, Fly {
-    var species: String
-    func eat(food: FoodType) {
-        print("")
-    }
-    func fly() {
-        print("")
-    }
+class Bird: Animal, Fly, Jump {
+    func canFly() {}
+    func canJump() {}
+}
+
+class Butterfly: Animal, Fly {
+    func canFly() {}
+}
+
+class Dog: Animal, Jump {
+    func canJump() {}
+}
+
+class Frog: Animal, Jump {
+    func canJump() {}
+}
+
+var flyingOnlyAnimals = [Animal]()
+
+let eagle = Bird(species: "Bird", breed: "Eagle")
+let yorkie = Dog(species: "Dog", breed: "Yorkie")
+let bessie = Butterfly(species: "Butterfly", breed: "Monarch")
+let kermit = Frog(species: "Frog", breed: "Tree Frog")
+let bat = Bird(species: "Bird", breed: "Bat")
+
+flyingOnlyAnimals += [bessie, bat]
+
+for animal in flyingOnlyAnimals {
+    print("\(animal.breed) of type \(animal.species) can only fly.")
 }
 
 
