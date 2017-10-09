@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
-    
-    @IBOutlet weak var touchableView: TouchbleView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,7 +12,7 @@
 		058B8B021F86D90800D8B26B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058B8B001F86D90800D8B26B /* Main.storyboard */; };
 		058B8B041F86D90800D8B26B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058B8B031F86D90800D8B26B /* Assets.xcassets */; };
 		058B8B071F86D90800D8B26B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058B8B051F86D90800D8B26B /* LaunchScreen.storyboard */; };
-		058B8B0F1F86D95300D8B26B /* TouchbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B8B0E1F86D95300D8B26B /* TouchbleView.swift */; };
+		058B8B0F1F86D95300D8B26B /* TouchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B8B0E1F86D95300D8B26B /* TouchableView.swift */; };
 		B90B23F61F8BFBE6006E9F10 /* TouchableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B23F51F8BFBE6006E9F10 /* TouchableVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		058B8B031F86D90800D8B26B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058B8B061F86D90800D8B26B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058B8B081F86D90800D8B26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		058B8B0E1F86D95300D8B26B /* TouchbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchbleView.swift; sourceTree = "<group>"; };
+		058B8B0E1F86D95300D8B26B /* TouchableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableView.swift; sourceTree = "<group>"; };
 		B90B23F51F8BFBE6006E9F10 /* TouchableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				058B8AFC1F86D90800D8B26B /* AppDelegate.swift */,
-				058B8B0E1F86D95300D8B26B /* TouchbleView.swift */,
+				058B8B0E1F86D95300D8B26B /* TouchableView.swift */,
 				B90B23F51F8BFBE6006E9F10 /* TouchableVC.swift */,
 				058B8AFE1F86D90800D8B26B /* ViewController.swift */,
 				058B8B001F86D90800D8B26B /* Main.storyboard */,
@@ -144,7 +144,7 @@
 			files = (
 				B90B23F61F8BFBE6006E9F10 /* TouchableVC.swift in Sources */,
 				058B8AFF1F86D90800D8B26B /* ViewController.swift in Sources */,
-				058B8B0F1F86D95300D8B26B /* TouchbleView.swift in Sources */,
+				058B8B0F1F86D95300D8B26B /* TouchableView.swift in Sources */,
 				058B8AFD1F86D90800D8B26B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

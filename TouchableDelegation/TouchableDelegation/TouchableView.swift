@@ -9,8 +9,8 @@
 import UIKit
 
 
-
-class TouchbleView: UIView {
+class TouchableView: UIView {
+    var delegate: MyViewDelegate?
 
     let touchGesture = UITapGestureRecognizer()
     
@@ -20,6 +20,7 @@ class TouchbleView: UIView {
         touchGesture.addTarget(self, action: #selector(handleTap(tap:)))
         
         self.addGestureRecognizer(touchGesture)
+        print("Touchable View init with Coder")
     }
     
     override init(frame: CGRect) {
@@ -27,14 +28,19 @@ class TouchbleView: UIView {
         
         touchGesture.addTarget(self, action: #selector(handleTap(tap:)))
         self.addGestureRecognizer(touchGesture)
-        
+        print("Touchable View init")
     }
     
     // Called when view is tapped
     // send this text "Tapped" to the UILabel called 
     @objc func handleTap(tap: UITapGestureRecognizer) {
-         print("Tapped")
-        
+        print("Tapped")
+        delegate?.userDidTouch()
     }
 
 }
+
+
+
+
+

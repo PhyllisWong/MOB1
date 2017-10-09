@@ -8,25 +8,23 @@
 
 import UIKit
 
-protocol SendingTouchDelegate {
+protocol MyViewDelegate {
     func userDidTouch()
 }
 
-class TouchableVC: UIViewController, SendingTouchDelegate {
+class TouchableVC: UIViewController, MyViewDelegate {
     
-    var delegate: SendingTouchDelegate? = nil
-
-    @IBOutlet weak var circle: UIView!
+    @IBOutlet weak var circle: TouchableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("View Contoller works")
+         circle.delegate = self
     }
     
     func userDidTouch() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let chooseVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        print(storyboard)
+        guard let chooseVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {return}
         
         self.navigationController?.pushViewController(chooseVC, animated: true)
     }
