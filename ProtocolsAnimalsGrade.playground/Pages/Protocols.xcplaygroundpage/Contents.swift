@@ -177,7 +177,6 @@ class TouchableView: UIView {
         super.init(frame: frame)
         
         self.addGestureRecognizer(touchGesture)
-        
     }
     
     @objc func handleTap(tap: UITapGestureRecognizer) {
