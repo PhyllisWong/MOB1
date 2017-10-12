@@ -44,6 +44,23 @@ func manipulateStrings(a: String, b: String, myFunc: (String, String) -> String?
     return myFunc(a, b)
 }
 // Challange 7:
+func concatenateSmallStrings(a: String, b: String) -> String? {
+    var catStr: String? = nil
+    if (a.count < 5 && b.count < 5) {
+        catStr = a + b
+    }
+    return catStr
+}
+
+// Challange 8:
+manipulateStrings(a: "abc", b: "def") { (a, b) -> String? in
+    return concatenateSmallStrings(a: a, b: b)
+}
+// returns "abcdef"
+manipulateStrings(a: "abcdef", b: "ghijkl") { (a, b) -> String? in
+    return concatenateSmallStrings(a: a, b: b)
+}
+// returns nil
 
 /*:
 
