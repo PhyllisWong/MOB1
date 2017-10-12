@@ -39,7 +39,11 @@ doesApply(a: 47685, b: 344832) { (first, second) -> Bool in
 doesApply(a: 10, b: 24) { (a, b) -> Bool in
     return sumOfDigits(a: a) == sumOfDigits(a: b)
 }
-
+// Challenge 6:
+func manipulateStrings(a: String, b: String, myFunc: (String, String) -> String?) ->String? {
+    return myFunc(a, b)
+}
+// Challange 7:
 
 /*:
 
