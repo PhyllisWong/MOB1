@@ -34,9 +34,7 @@ class Merchant {
     func sell(product: String) -> String {
         
         guard let callback = productCallback else {return product}
-        
         callback(product)
-        
         return product
     }
 }
@@ -44,7 +42,6 @@ class Merchant {
 class Customer {
     
     init() {
-        
     }
     
     // Handle Customer recieving merchant changes

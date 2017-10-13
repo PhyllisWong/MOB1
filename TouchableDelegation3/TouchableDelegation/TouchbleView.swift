@@ -7,16 +7,19 @@
 //
 
 import UIKit
-typealias tapCallback = () -> Void
+typealias TapCallback = () -> ()
 
 class TouchbleView: UIView {
 
     let touchGesture = UITapGestureRecognizer()
+    var tapCallback : TapCallback?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
         touchGesture.addTarget(self, action: #selector(handleTap(tap:)))
         self.addGestureRecognizer(touchGesture)
+        
     }
     
     override init(frame: CGRect) {
@@ -27,6 +30,8 @@ class TouchbleView: UIView {
     
     // Called when view is tapped
     @objc func handleTap(tap: UITapGestureRecognizer) {
-        
+        guard let callback = tapCallback else {return}
+        print("Tap sent!")
+        callback()
     }
 }

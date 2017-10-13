@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var touchableView: TouchbleView!
     
+    func receivedTap() {
+        print("Tap Received")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        touchableView.tapCallback = receivedTap
     }
 }
 
