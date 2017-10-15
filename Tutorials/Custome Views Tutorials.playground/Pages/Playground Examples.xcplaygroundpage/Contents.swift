@@ -3,15 +3,18 @@
 import UIKit
 import PlaygroundSupport
 
+
 let greenView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
 
 greenView.backgroundColor = .green
 PlaygroundPage.current.liveView = greenView
 
 
-let redView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+let redView = UIView(frame: CGRect(x: 50, y: 50, width: 150, height: 100))
 
 redView.backgroundColor = .red
-PlaygroundPage.current.liveView = redView
+//PlaygroundPage.current.liveView = greenView + redView
+greenView.addSubview(redView)
 
-
+greenView.center
+redView.center
