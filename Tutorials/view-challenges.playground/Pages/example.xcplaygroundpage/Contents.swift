@@ -36,6 +36,7 @@ blueView.backgroundColor = .blue
 canvas.addSubview(blueView)
 
 // configure green
+<<<<<<< HEAD
 let greenWidth = blueView.frame.size.width * 0.5
 let greenHeight = greenWidth
 let greenX = canvas.frame.size.width - greenWidth
@@ -45,6 +46,16 @@ let greenView = UIView(frame: greenFrame)
 greenView.backgroundColor = .green
 canvas.addSubview(greenView)
 
+=======
+let greenWidth = blueWidth * 0.5
+let greenHeight = Int(greenWidth)
+let greenX = Int(canvas.frame.size.width - greenWidth)
+
+let greenFrame = CGRect(x: Int(greenX), y: 0, width: Int(greenWidth), height: greenHeight)
+let greenView = UIView(frame: greenFrame)
+greenView.backgroundColor = .green
+canvas.addSubview(greenView)
+>>>>>>> 9e0d51c8ce9044015c3e62a0bd226242e043c1ed
 greenView.center.y = blueView.center.y
 /*:
 #### 2nd implementation

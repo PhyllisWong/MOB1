@@ -2,7 +2,11 @@
 import UIKit
 import PlaygroundSupport
 
+<<<<<<< HEAD
 let canvasFrame = CGRect(x: 0, y :0, width: 300, height: 300)
+=======
+let canvasFrame = CGRect(x: 0, y :0, width: 400, height: 400)
+>>>>>>> 9e0d51c8ce9044015c3e62a0bd226242e043c1ed
 let canvas = UIView(frame: canvasFrame)
 canvas.backgroundColor = .white
 PlaygroundPage.current.liveView = canvas // make the canvas appear in the assistant editor
@@ -18,3 +22,29 @@ PlaygroundPage.current.liveView = canvas // make the canvas appear in the assist
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+<<<<<<< HEAD
+=======
+let redWidth = canvas.frame.size.width * 0.33
+let redHeight = redWidth
+
+let redFrame = CGRect(x: 0, y: 0, width: redWidth, height: redHeight)
+
+let redView1 = UIView(frame: redFrame)
+let redView2 = UIView(frame: redFrame)
+let redView3 = UIView(frame: redFrame)
+
+redView1.backgroundColor = .red
+redView2.backgroundColor = .red
+redView3.backgroundColor = .red
+
+canvas.addSubview(redView1)
+canvas.addSubview(redView2)
+canvas.addSubview(redView3)
+redView1.center.y = canvas.center.y
+redView1.center.x = canvas.center.x
+redView2.center.y = canvas.center.y * 1.66
+redView2.center.x = canvas.center.x * 1.66
+
+
+
+>>>>>>> 9e0d51c8ce9044015c3e62a0bd226242e043c1ed

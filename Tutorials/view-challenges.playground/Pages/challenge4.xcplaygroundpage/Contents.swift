@@ -1,7 +1,11 @@
 import UIKit
 import PlaygroundSupport
 
+<<<<<<< HEAD
 let canvasFrame = CGRect(x: 0, y :0, width: 300, height: 300)
+=======
+let canvasFrame = CGRect(x: 0, y :0, width: 400, height: 400)
+>>>>>>> 9e0d51c8ce9044015c3e62a0bd226242e043c1ed
 let canvas = UIView(frame: canvasFrame)
 canvas.backgroundColor = .white
 PlaygroundPage.current.liveView = canvas // make the canvas appear in the assistant editor
@@ -18,4 +22,73 @@ let colors: [UIColor] = [.green, .gray, .purple, .yellow, .red, .orange, .lightG
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+<<<<<<< HEAD
+=======
+let viewWidth = canvas.frame.size.width * 0.33
+let viewHeight = viewWidth
+
+let purpleX = canvas.frame.size.width - viewWidth * 0.5
+let greyX = canvas.center.x
+let greenX = canvas.centerXAnchor
+let blueY = canvas.frame.size.height - viewHeight * 0.5
+
+let viewFrame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight)
+
+let purpleView = UIView(frame: viewFrame)
+let greyView = UIView(frame: viewFrame)
+let greenView = UIView(frame: viewFrame)
+let yellowView = UIView(frame: viewFrame)
+let redView = UIView(frame: viewFrame)
+let orangeView = UIView(frame: viewFrame)
+let lightGreyView = UIView(frame: viewFrame)
+let whiteView = UIView(frame: viewFrame)
+let blueView = UIView(frame: viewFrame)
+greenView.backgroundColor = .green
+purpleView.backgroundColor = .purple
+greyView.backgroundColor = .gray
+yellowView.backgroundColor = .yellow
+redView.backgroundColor = .red
+orangeView.backgroundColor = .orange
+lightGreyView.backgroundColor = .lightGray
+whiteView.backgroundColor = .white
+blueView.backgroundColor = .blue
+
+canvas.addSubview(purpleView)
+canvas.addSubview(greyView)
+canvas.addSubview(greenView)
+canvas.addSubview(yellowView)
+canvas.addSubview(redView)
+canvas.addSubview(orangeView)
+canvas.addSubview(lightGreyView)
+canvas.addSubview(whiteView)
+canvas.addSubview(blueView)
+
+purpleView.center.x = purpleX
+greyView.center.x = greyX
+yellowView.center.y = canvas.center.y
+redView.center.y = canvas.center.y
+redView.center.x = greyX
+orangeView.center.y = canvas.center.y
+orangeView.center.x = purpleX
+
+blueView.center.x = purpleX
+blueView.center.y = blueY
+lightGreyView.center.y = blueY
+whiteView.center.x = canvas.center.x
+whiteView.center.y = blueY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 9e0d51c8ce9044015c3e62a0bd226242e043c1ed
 
