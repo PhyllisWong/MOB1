@@ -11,7 +11,9 @@ import UIKit
 class TriviaVC: UIViewController {
 
     @IBOutlet weak var triviaLabel: UILabel!
-    let randomTrivia = TriviaProvider()
+    let triviaProvider = TriviaProvider()
+    var currentQuestion: Trivia? // Holds the questions and all possible answers
+    var selectedAnswer: Trivia?
     
     
     @IBAction func didPressChooseAnswer() {
@@ -20,17 +22,27 @@ class TriviaVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let showQuestion = randomTrivia.randomQuestion()
-        triviaLabel.text = showQuestion[0]
+        let showQuestion = triviaProvider.randomQuestion()
+        self.currentQuestion = showQuestion
+        triviaLabel.text = showQuestion.question
+        
+    }
+    
+    func checkGuessedCorrectAnswer(selectedAnswer: Trivia) {
+        self.selectedAnswer = currentQuestion
+        print("Answer received")
+        if selectedAnswer == currentQuestion?.answer {
+            triviaLabel.text = "You're right! Its \(selectedAnswer.answer)"
+        } else {
+            triviaLabel.text = "Your guess was wrong, it was \(selectedAnswer.answer)"
+        }
     }
     
     func goToChooseAnswerVC() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let chooseAnswerVC = storyboard.instantiateViewController(withIdentifier: "ChooseAnswerVC") as! ChooseAnswerVC
-//        // TODO: Make sure to set the *delegate* on the FunFactsViewController
-//
-//        self.navigationController?.pushViewController(chooseAnswerVC, animated: true)
-        self.performSegue(withIdentifier: "ChooseAnswer", sender: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let chooseAnswerVC = storyboard.instantiateViewController(withIdentifier: "ChooseAnswerVC") as! ChooseAnswerVC
+        self.navigationController?.pushViewController(chooseAnswerVC, animated: true)
+//        self.performSegue(withIdentifier: "ChooseAnswer", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
