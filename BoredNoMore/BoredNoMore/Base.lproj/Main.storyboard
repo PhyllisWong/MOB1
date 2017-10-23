@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p3d-p8-Kwa">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Choose FunVC-->
+        <scene sceneID="xlw-KU-pDj">
+            <objects>
+                <viewController id="kNh-0D-3wd" customClass="ChooseFunVC" customModule="BoredNoMore" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8nz-az-8gc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ok5-LJ-ZlI">
+                                <rect key="frame" x="20" y="273" width="280" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="gp9-0v-mSg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" red="0.54946152169999996" green="0.67613408220000004" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="FUN FACTS"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="729-N8-Yaf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ty1-Be-UWi">
+                                <rect key="frame" x="20" y="338" width="280" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="idX-xI-T7s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" red="0.54946152169999996" green="0.67613408220000004" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="TRIVIA QUESTIONS"/>
+                                <connections>
+                                    <segue destination="Wok-4H-4q9" kind="show" id="zfN-dr-E4u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgF-P8-asV">
+                                <rect key="frame" x="20" y="403" width="280" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="l01-kd-Ft4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" red="0.54946152169999996" green="0.67613408220000004" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="DAD JOKES"/>
+                                <connections>
+                                    <segue destination="y3F-oR-MGI" kind="show" id="KXy-8b-laF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hle-uh-FDN">
+                                <rect key="frame" x="20" y="159" width="280" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yzc-3X-prz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54946152169999996" green="0.67613408220000004" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ty1-Be-UWi" firstAttribute="top" secondItem="Ok5-LJ-ZlI" secondAttribute="bottom" constant="20" id="7f0-t1-ROv"/>
+                            <constraint firstItem="cta-5z-KbQ" firstAttribute="trailing" secondItem="hle-uh-FDN" secondAttribute="trailing" constant="20" id="DTm-tY-kn4"/>
+                            <constraint firstItem="cta-5z-KbQ" firstAttribute="trailing" secondItem="hgF-P8-asV" secondAttribute="trailing" constant="20" id="Lzq-D8-GXo"/>
+                            <constraint firstItem="ty1-Be-UWi" firstAttribute="leading" secondItem="cta-5z-KbQ" secondAttribute="leading" constant="20" id="Nde-1z-wFQ"/>
+                            <constraint firstItem="hgF-P8-asV" firstAttribute="leading" secondItem="cta-5z-KbQ" secondAttribute="leading" constant="20" id="QHf-6K-c6K"/>
+                            <constraint firstItem="hgF-P8-asV" firstAttribute="top" secondItem="ty1-Be-UWi" secondAttribute="bottom" constant="20" id="aLC-wE-wSN"/>
+                            <constraint firstItem="Ok5-LJ-ZlI" firstAttribute="leading" secondItem="cta-5z-KbQ" secondAttribute="leading" constant="20" id="bGf-Gb-Dqi"/>
+                            <constraint firstItem="cta-5z-KbQ" firstAttribute="trailing" secondItem="ty1-Be-UWi" secondAttribute="trailing" constant="20" id="eZP-ga-bhd"/>
+                            <constraint firstItem="cta-5z-KbQ" firstAttribute="bottom" secondItem="hgF-P8-asV" secondAttribute="bottom" constant="120" id="hpQ-cn-Yo0"/>
+                            <constraint firstItem="hle-uh-FDN" firstAttribute="top" secondItem="cta-5z-KbQ" secondAttribute="top" constant="95" id="rGv-KC-Hba"/>
+                            <constraint firstItem="hle-uh-FDN" firstAttribute="leading" secondItem="cta-5z-KbQ" secondAttribute="leading" constant="20" id="u75-KS-fXV"/>
+                            <constraint firstItem="cta-5z-KbQ" firstAttribute="trailing" secondItem="Ok5-LJ-ZlI" secondAttribute="trailing" constant="20" id="uVp-8h-7bm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cta-5z-KbQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dlb-hW-PU2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reL-oE-E5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313.125" y="29.577464788732396"/>
+        </scene>
+        <!--FunFactsVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="FunFactsVC" customClass="FunFactsVC" customModule="BoredNoMore" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRb-rC-DVe">
+                                <rect key="frame" x="20" y="448" width="280" height="45"/>
+                                <color key="backgroundColor" red="0.10318510979999999" green="0.29895597699999998" blue="0.28590762619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bVU-EK-UfQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Show Another Fun Fact"/>
+                                <connections>
+                                    <action selector="showFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIn-Mt-OCR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKF-4g-9dR">
+                                <rect key="frame" x="20" y="159" width="280" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="bXc-4F-TNT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.10318510979413986" green="0.29895597696304321" blue="0.28590762615203857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are born with 300 bones; by the time you are an adult you will have 206" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJJ-Wm-S1Z">
+                                <rect key="frame" x="20" y="256" width="284" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="Iai-21-QLE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IKF-4g-9dR" firstAttribute="leading" secondItem="qJJ-Wm-S1Z" secondAttribute="leading" id="36E-jc-6t0"/>
+                            <constraint firstItem="IKF-4g-9dR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Lb-Xb-QIh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IKF-4g-9dR" secondAttribute="trailing" constant="20" id="9oe-zf-Qou"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GRb-rC-DVe" secondAttribute="bottom" constant="75" id="PN6-Qi-gQF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GRb-rC-DVe" secondAttribute="trailing" constant="20" id="Tzt-CZ-H9D"/>
+                            <constraint firstItem="GRb-rC-DVe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cJ4-Oo-pSz"/>
+                            <constraint firstItem="IKF-4g-9dR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="dus-Uw-o3I"/>
+                            <constraint firstItem="qJJ-Wm-S1Z" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="i0a-hL-kEK"/>
+                            <constraint firstItem="qJJ-Wm-S1Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="192" id="i3h-U4-qpm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="funFactLabel" destination="qJJ-Wm-S1Z" id="q7H-B5-Vfz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.375" y="-702.46478873239437"/>
+        </scene>
+        <!--TriviaVC-->
+        <scene sceneID="nkv-qQ-Pbm">
+            <objects>
+                <viewController storyboardIdentifier="TriviaVC" id="Wok-4H-4q9" customClass="TriviaVC" customModule="BoredNoMore" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G1W-8G-93j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trivia Question...?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysn-Xh-bUF">
+                                <rect key="frame" x="20" y="124" width="280" height="224"/>
+                                <color key="backgroundColor" white="1" alpha="0.78060787671232879" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.67272486279999999" blue="0.47005231860000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jks-Bj-bcO">
+                                <rect key="frame" x="20" y="448" width="280" height="45"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="O1r-GN-9J6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" red="0.99904578924179077" green="0.67575401067733765" blue="0.46857833862304688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CHOOSE ANSWER"/>
+                                <connections>
+                                    <action selector="didPressChooseAnswer" destination="Wok-4H-4q9" eventType="touchUpInside" id="Ln9-mD-4r5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.67272486279999999" blue="0.47005231860000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jks-Bj-bcO" firstAttribute="leading" secondItem="iiJ-55-dfg" secondAttribute="leading" constant="20" id="CIa-Sc-2g9"/>
+                            <constraint firstItem="jks-Bj-bcO" firstAttribute="top" secondItem="ysn-Xh-bUF" secondAttribute="bottom" constant="100" id="CQZ-0y-E0Z"/>
+                            <constraint firstItem="iiJ-55-dfg" firstAttribute="trailing" secondItem="ysn-Xh-bUF" secondAttribute="trailing" constant="20" id="IWo-kj-Di3"/>
+                            <constraint firstItem="iiJ-55-dfg" firstAttribute="trailing" secondItem="jks-Bj-bcO" secondAttribute="trailing" constant="20" id="OTY-vS-jVe"/>
+                            <constraint firstItem="ysn-Xh-bUF" firstAttribute="top" secondItem="iiJ-55-dfg" secondAttribute="top" constant="60" id="ScB-gV-Q1v"/>
+                            <constraint firstItem="iiJ-55-dfg" firstAttribute="bottom" secondItem="jks-Bj-bcO" secondAttribute="bottom" constant="75" id="awK-Vu-3dX"/>
+                            <constraint firstItem="ysn-Xh-bUF" firstAttribute="leading" secondItem="iiJ-55-dfg" secondAttribute="leading" constant="20" id="d6l-tp-dkf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iiJ-55-dfg"/>
+                    </view>
+                    <connections>
+                        <outlet property="triviaLabel" destination="ysn-Xh-bUF" id="YGJ-zb-dNn"/>
+                        <segue destination="wQZ-hn-dk2" kind="show" identifier="ChooseAnswer" id="XBS-Lx-boX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lh6-ot-jEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="30"/>
+        </scene>
+        <!--ChooseAnswerVC-->
+        <scene sceneID="3sI-em-awc">
+            <objects>
+                <viewController storyboardIdentifier="ChooseAnswerVC" id="wQZ-hn-dk2" userLabel="ChooseAnswerVC" customClass="ChooseAnswerVC" customModule="BoredNoMore" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iia-bE-Mmr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-Wm-aPy">
+                                <rect key="frame" x="20" y="84" width="280" height="284"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.67272486279999999" blue="0.47005231860000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aHm-2W-uZF" firstAttribute="trailing" secondItem="Ivx-Wm-aPy" secondAttribute="trailing" constant="20" id="0ov-QK-zos"/>
+                            <constraint firstItem="Ivx-Wm-aPy" firstAttribute="leading" secondItem="aHm-2W-uZF" secondAttribute="leading" constant="20" id="Asa-Pf-x79"/>
+                            <constraint firstItem="Ivx-Wm-aPy" firstAttribute="top" secondItem="aHm-2W-uZF" secondAttribute="top" constant="20" id="Nv4-Tc-Tm2"/>
+                            <constraint firstItem="aHm-2W-uZF" firstAttribute="bottom" secondItem="Ivx-Wm-aPy" secondAttribute="bottom" constant="200" id="Oon-Iz-E7e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aHm-2W-uZF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6l-vt-sgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344" y="30"/>
+        </scene>
+        <!--Dad JokesVC-->
+        <scene sceneID="kpS-J2-dUB">
+            <objects>
+                <viewController id="y3F-oR-MGI" customClass="DadJokesVC" customModule="BoredNoMore" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZB-NW-Hcd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBY-JR-QIc">
+                                <rect key="frame" x="20" y="448" width="280" height="45"/>
+                                <color key="backgroundColor" red="0.31080725790000002" green="0.25262859459999998" blue="0.34767711159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xGb-7F-VIn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="ANOTHER JOKE"/>
+                                <connections>
+                                    <action selector="didPressAnother" destination="y3F-oR-MGI" eventType="touchUpInside" id="BOg-Lp-IE1"/>
+                                    <action selector="showFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVj-kl-Fcv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why did the mushroom get invited to the party?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0L-eB-hRe" userLabel="jokeLabel">
+                                <rect key="frame" x="20" y="159" width="280" height="49.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.31080725789070129" green="0.25262859463691711" blue="0.34767711162567139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xli-rS-JKY" userLabel="answerLabel">
+                                <rect key="frame" x="20" y="284" width="280" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVZ-AL-nvI">
+                                <rect key="frame" x="20" y="383" width="280" height="45"/>
+                                <color key="backgroundColor" red="0.31080725790000002" green="0.25262859459999998" blue="0.34767711159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="iUV-YV-zxW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="PUNCHLINE"/>
+                                <connections>
+                                    <action selector="didPressAnswer" destination="y3F-oR-MGI" eventType="touchUpInside" id="QGa-7D-rK9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77111251296243499" green="0.67956451607636825" blue="0.91412198604060912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eBY-JR-QIc" firstAttribute="top" secondItem="rVZ-AL-nvI" secondAttribute="bottom" constant="20" id="3uB-Gt-M03"/>
+                            <constraint firstItem="z0L-eB-hRe" firstAttribute="leading" secondItem="BKO-tc-hDk" secondAttribute="leading" constant="20" id="CAo-Vf-djj"/>
+                            <constraint firstItem="xli-rS-JKY" firstAttribute="leading" secondItem="BKO-tc-hDk" secondAttribute="leading" constant="20" id="Cfg-Oc-Zfq"/>
+                            <constraint firstItem="z0L-eB-hRe" firstAttribute="top" secondItem="BKO-tc-hDk" secondAttribute="top" constant="95" id="Fa4-jQ-8JD"/>
+                            <constraint firstItem="rVZ-AL-nvI" firstAttribute="leading" secondItem="BKO-tc-hDk" secondAttribute="leading" constant="20" id="Fz3-n1-uFS"/>
+                            <constraint firstItem="BKO-tc-hDk" firstAttribute="trailing" secondItem="xli-rS-JKY" secondAttribute="trailing" constant="20" id="LlF-MI-4cZ"/>
+                            <constraint firstItem="BKO-tc-hDk" firstAttribute="bottom" secondItem="eBY-JR-QIc" secondAttribute="bottom" constant="75" id="OYl-b3-AMl"/>
+                            <constraint firstItem="BKO-tc-hDk" firstAttribute="trailing" secondItem="rVZ-AL-nvI" secondAttribute="trailing" constant="20" id="c2T-4f-z8C"/>
+                            <constraint firstItem="BKO-tc-hDk" firstAttribute="trailing" secondItem="eBY-JR-QIc" secondAttribute="trailing" constant="20" id="cgq-qv-nms"/>
+                            <constraint firstItem="BKO-tc-hDk" firstAttribute="trailing" secondItem="z0L-eB-hRe" secondAttribute="trailing" constant="20" id="nyM-fl-s1p"/>
+                            <constraint firstItem="eBY-JR-QIc" firstAttribute="leading" secondItem="BKO-tc-hDk" secondAttribute="leading" constant="20" id="rfE-ne-PWk"/>
+                            <constraint firstItem="xli-rS-JKY" firstAttribute="centerY" secondItem="fZB-NW-Hcd" secondAttribute="centerY" id="tze-yu-Ogm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BKO-tc-hDk"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="xli-rS-JKY" id="8od-qZ-O07"/>
+                        <outlet property="jokeLabel" destination="z0L-eB-hRe" id="bHr-42-Tvw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fe0-nq-nZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.375" y="766.90140845070425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="inf-iK-g2k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p3d-p8-Kwa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="EuC-YG-v9Y">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kNh-0D-3wd" kind="relationship" relationship="rootViewController" id="Q92-SY-1ZO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DY-ZJ-4DI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1093" y="30"/>
+        </scene>
+    </scenes>
+</document>

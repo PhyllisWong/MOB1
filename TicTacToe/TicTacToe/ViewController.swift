@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         if gameState[sender.tag-1] == 0 && gameIsActive == true {
             gameState[sender.tag-1] = activePlayer
             if activePlayer == 1 {
-                sender.setImage(UIImage(named: "Cross.png"), for : UIControlState())
+                sender.setImage(UIImage(named: "Cross.png"), for: UIControlState())
                 activePlayer = 2
             }
             else {
