@@ -8,13 +8,18 @@
 
 import UIKit
 
-class TriviaVC: UIViewController {
+class TriviaVC: UIViewController, ChooseAnswerDelegate {
+    func didSelectAnswer(answer: String) {
+        print(answer)
+    }
+    
 
     @IBOutlet weak var triviaLabel: UILabel!
     let triviaProvider = TriviaProvider()
     var currentQuestion: Trivia? // Holds the questions and all possible answers
-    var selectedAnswer: Trivia?
+    var selectedAnswer: String?
     var initialAnswerHolder: [String] = []
+    
     
     
     @IBAction func didPressChooseAnswer() {
@@ -25,34 +30,53 @@ class TriviaVC: UIViewController {
         super.viewDidLoad()
         let showQuestion = triviaProvider.randomQuestion()
         self.currentQuestion = showQuestion
-        //I have to make an array from her Object properties
+        var randomizedAnswers = randomizeAnswers(answersArr: initialAnswerHolder)
         
         self.initialAnswerHolder.append(showQuestion.answer)
         self.initialAnswerHolder.append(showQuestion.wrongAnswer1)
         self.initialAnswerHolder.append(showQuestion.wrongAnswer2)
         self.initialAnswerHolder.append(showQuestion.wrongAnswer3)
         
-       
         triviaLabel.text = showQuestion.question
         
     }
     
-//    func checkGuessedCorrectAnswer(selectedAnswer: Trivia) {
-//        self.selectedAnswer = currentQuestion
-//        print("Answer received")
-//        if selectedAnswer == currentQuestion?.answer {
-//            triviaLabel.text = "You're right! Its \(selectedAnswer.answer)"
-//        } else {
-//            triviaLabel.text = "Your guess was wrong, it was \(selectedAnswer.answer)"
-//        }
-//    }
+    func randomizeAnswers(answersArr: [String]) -> [String] {
+        var answers = answersArr
+        var last = answersArr.count - 1
+        
+        while(last > 0)
+        {
+            let rand = Int(arc4random_uniform(UInt32(last)))
+            
+            print("swap items[\(last)] = \(answers[last]) with items[\(rand)] = \(answers[rand])")
+            
+            answers.swapAt(last, rand)
+            
+            print(answers)
+            
+            last -= 1
+        }
+        return answers
+    }
+    
+    func checkGuessedCorrectAnswer(selectedAnswer: String) {
+        let correctAnswer = currentQuestion?.answer
+        print("Answer received")
+        if selectedAnswer == currentQuestion?.answer {
+            triviaLabel.text = "You're right! Its \(selectedAnswer)"
+        } else {
+            triviaLabel.text = "Your guess was wrong, it was \(String(describing: correctAnswer))"
+        }
+    }
     
     func goToChooseAnswerVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let chooseAnswerVC = storyboard.instantiateViewController(withIdentifier: "ChooseAnswerVC") as! ChooseAnswerVC
         chooseAnswerVC.recievedAnswerObject = self.currentQuestion
+        chooseAnswerVC.delegate = self
+        
         self.navigationController?.pushViewController(chooseAnswerVC, animated: true)
-//        self.performSegue(withIdentifier: "ChooseAnswer", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
