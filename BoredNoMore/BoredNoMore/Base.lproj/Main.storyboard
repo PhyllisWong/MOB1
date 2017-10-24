@@ -210,7 +210,7 @@
         <!--ChooseAnswerVC-->
         <scene sceneID="3sI-em-awc">
             <objects>
-                <viewController storyboardIdentifier="ChooseAnswerVC" id="wQZ-hn-dk2" userLabel="ChooseAnswerVC" customClass="ChooseAnswerVC" customModule="BoredNoMore" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseAnswerVC" id="wQZ-hn-dk2" userLabel="ChooseAnswerVC" customClass="ChooseAnswerVC" customModule="BoredNoMore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iia-bE-Mmr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,6 +218,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-Wm-aPy">
                                 <rect key="frame" x="20" y="84" width="280" height="284"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answerCell" id="esW-ER-19B">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="esW-ER-19B" id="sR8-7n-3bj">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.67272486279999999" blue="0.47005231860000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -229,6 +239,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aHm-2W-uZF"/>
                     </view>
+                    <connections>
+                        <outlet property="answerCell" destination="Ivx-Wm-aPy" id="gNS-fA-Kgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6l-vt-sgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

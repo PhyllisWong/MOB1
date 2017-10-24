@@ -33,8 +33,8 @@ struct TriviaProvider {
     ]
     
     func randomQuestion() -> Trivia {
-        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: trivia.count)
-        return trivia[randomNumber]
+        let randomTrivia = GKRandomSource.sharedRandom().nextInt(upperBound: trivia.count)
+        return trivia[randomTrivia]
     }
 }
 
