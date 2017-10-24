@@ -18,7 +18,7 @@ struct Trivia {
 
 struct TriviaProvider {
     let trivia: [Trivia] = [
-        Trivia(question: "What four states of matter are observable in everyday life?", answer: "Solid, Liquid, Gas and Plasma", wrongAnswer1: "Liquid, Gas, Energy, Plasma", wrongAnswer2: "Solid, Liquid, Light, Plasma", wrongAnswer3: "Plasma, Liquid, Solid, Mass"),
+        Trivia(question: "What four states of matter are observable in everyday life?", answer: "Solid, Liquid, Gas, Plasma", wrongAnswer1: "Liquid, Gas, Energy, Plasma", wrongAnswer2: "Solid, Liquid, Light, Plasma", wrongAnswer3: "Plasma, Liquid, Solid, Mass"),
         Trivia(question: "Pupusas, handmade thick stuffed corn tortillas, are a traditional dish from what country?", answer: "El Salvador", wrongAnswer1: "Mexico", wrongAnswer2: "Guadamala", wrongAnswer3: "Peru"),
         Trivia(question: "Which of the traditional five senses are dolphins believed not to possess?", answer: "Smell", wrongAnswer1: "Taste", wrongAnswer2: "Hearing", wrongAnswer3: "Sight"),
         Trivia(question: "Victoria Beckham was a member of which all girl English pop group formed in 1994?", answer: "The Spice Girls", wrongAnswer1: "Ace of Bass", wrongAnswer2: "Destny's Child", wrongAnswer3: "En Vogue"),

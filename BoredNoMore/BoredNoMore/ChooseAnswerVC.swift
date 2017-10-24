@@ -40,11 +40,11 @@ class ChooseAnswerVC: UIViewController, UITableViewDataSource {
         answers.append((recievedAnswerObject?.wrongAnswer2)!)
         answers.append((recievedAnswerObject?.wrongAnswer3)!)
         
-        answerCell.dataSource = self as! UITableViewDataSource
+        answerCell.dataSource = self as UITableViewDataSource
         // self.answerCell.reloadData()
     }
     
-    func numberOfSelection(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
