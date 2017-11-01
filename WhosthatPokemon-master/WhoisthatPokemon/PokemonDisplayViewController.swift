@@ -16,9 +16,9 @@ Instructions:
  
 */
 
-protocol PokeDelegate: class {
-    func didSelectPokemon(pokemon: Pokemon)
-}
+//protocol PokeDelegate: class {
+//    func didSelectPokemon(pokemon: Pokemon)
+//}
 
 import UIKit
 
@@ -35,8 +35,6 @@ class PokemonDisplayViewController: UIViewController {
         Pokemon(name: "Horsea", shadowImage: UIImage(named: "seadra_shadow")!, actualImage: UIImage(named: "seadra")!),
         Pokemon(name: "Dragonaire", shadowImage: UIImage(named: "dragonaire_shadow")!, actualImage: UIImage(named: "dragonaire")!),
         Pokemon(name: "Weepingbell", shadowImage: UIImage(named: "weepingbell_shadow")!, actualImage: UIImage(named: "weepingbell")!)
-        
-        
     ]
     
     
